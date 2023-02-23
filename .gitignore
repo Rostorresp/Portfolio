@@ -1,6 +1,6 @@
 #VisualStudio
 .vscode
-
+build
 node_modules
 
 
