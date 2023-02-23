@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass src/scss:build/css",
-    "deploy": "npx gh-pages -d ."
+    "deploy": "gh-pages -d ."
   },
   "keywords": [
     "GULP",
