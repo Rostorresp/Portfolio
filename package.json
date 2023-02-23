@@ -4,7 +4,8 @@
   "description": "miPortafolio con GULP, SASS, JS y HTML",
   "main": "index.js",
   "scripts": {
-    "sass": "sass src/scss:build/css"
+    "sass": "sass src/scss:build/css",
+    "deploy": "npx gh-pages -d ."
   },
   "keywords": [
     "GULP",
