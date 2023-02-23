@@ -1,0 +1,135 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+  font-family: v.$fuente-principal;
+  font-weight: 600;
+  text-transform: uppercase;
+  left: 0;
+  top: 0;
+}
+.contenido-header {
+  display: none;
+  @include m.tablet {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+  }
+  .navegacion-principal {
+    padding: 2rem 0;
+    margin-right: 4.2rem;
+  }
+}
+.menu-fixed {
+  background-color: v.$color-primario;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.2);
+
+  &.fijo {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 4000;
+  }
+}
+
+.navegacion-enlace {
+  margin: 0 0.8rem;
+  font-size: 2rem;
+  color: v.$blanco;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  &:hover {
+    transition: 0.7s all;
+    color: v.$gris;
+  }
+}
+
+.botton-up {
+  font-size: 2.5rem;
+  color: v.$blanco;
+  margin-left: 5rem;
+
+  &:hover {
+    cursor: pointer;
+    color: v.$gris;
+    transition: 0.7s all;
+  }
+}
+
+#scrollBtn {
+  transition: transform 0.2s ease-in-out;
+}
+
+#scrollBtn:active {
+  transform: scale(0.95);
+}
+
+.navegacion-enlace.active {
+  background-color: #0c396a;
+}
+///////////////////////////////////////////////////////////////////////
+
+.barra-responsive {
+  @include m.tablet {
+    display: none;
+  }
+  .menu-boton,
+  .menu-close {
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    color: v.$blanco;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 2.5rem;
+    padding: 0.5rem 1rem;
+    margin: 1.5rem 1.5rem;
+    border: 0.1rem solid v.$blanco;
+    border-radius: 0.5rem;
+    background-color: rgba(76, 80, 84, 0.8);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.navegacion__responsive {
+  position: fixed;
+  background: v.$color-primario;
+  z-index: 3;
+  top: 0;
+  left: -100vw;
+  width: 75%;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  transition: 0.5s;
+  padding-top: 10rem;
+  .navegacion__enlace-responsive {
+    margin-left: 5rem;
+    font-size: 3rem;
+    color: v.$blanco;
+    text-decoration: none;
+    line-height: 7rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.navegacion__responsive.is-active {
+  left: 0;
+}
+
+.navegacion__enlace-responsive.active {
+  color: #0c396a;
+  font-weight: bold;
+}
+
+////////////////////////////////////////////////////////////
+
+.noscroll {
+  overflow: hidden;
+}
