@@ -27,6 +27,12 @@ function css(done) {
     done()
 }
 
+function html(done) {
+    src("*.html")
+        .pipe(dest("build/."))
+    done()
+}
+
 function imagenes(done) {
     const opciones = {
         optimizationLevel: 3
@@ -65,8 +71,9 @@ function dev(done) {
     done()
 }
 
+exports.html = html;
 exports.css = css;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.js = javascript;
-exports.dev = parallel(imagenes, versionWebp, javascript, dev);
+exports.dev = parallel(imagenes, versionWebp, javascript, dev, html);
