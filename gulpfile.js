@@ -76,4 +76,4 @@ exports.css = css;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.js = javascript;
-exports.dev = parallel(imagenes, versionWebp, javascript, dev, html);
+exports.dev = parallel(imagenes, versionWebp, html, javascript, css, dev);
