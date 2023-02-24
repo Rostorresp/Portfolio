@@ -16,7 +16,7 @@ const cache = require('gulp-cache')
 //javascript
 const terser = require('gulp-terser-js')
 
-function css(done) {
+function css_to_build(done) {
     src("src/scss/**/*.scss")
         .pipe(sourcemaps.init())
         .pipe(plumber())
@@ -24,6 +24,17 @@ function css(done) {
         .pipe(postcss([autoprofixer(), cssnano()]))
         .pipe(sourcemaps.write('.'))
         .pipe(dest("build/css"))
+    done()
+}
+
+function css_to_src(done) {
+    src("src/scss/**/*.scss")
+        .pipe(sourcemaps.init())
+        .pipe(plumber())
+        .pipe(sass())
+        .pipe(postcss([autoprofixer(), cssnano()]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(dest("src/css"))
     done()
 }
 
@@ -41,6 +52,7 @@ function imagenes(done) {
     src("src/img/**/*.{png,jpg}")
         .pipe(cache(imagemin(opciones)))
         .pipe(dest("build/img"))
+        .pipe(dest("src/img"))
     done()
 }
 
@@ -52,6 +64,7 @@ function versionWebp(done) {
     src("src/img/**/*.{png,jpg}")
         .pipe(webp(opciones))
         .pipe(dest("build/img"))
+        .pipe(dest("src/img"))
     done()
 }
 
@@ -66,22 +79,15 @@ function javascript(done) {
 
 
 function dev(done) {
-    watch("src/scss/**/*.scss", css)
-    watch("src/js/**/*.js", javascript)
-
+    watch("src/scss/**/*.scss", css_to_src)
     done()
 }
-
-
-function main(done) {
-    done()
-}
-
 
 exports.html = html;
-exports.css = css;
+exports.css_to_build = css_to_build;
+exports.css_to_src = css_to_src;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.js = javascript;
-exports.dev = parallel(imagenes, versionWebp, html, javascript, css, dev);
-exports.main = parallel(main, imagenes, versionWebp, html, javascript, css);
+exports.dev = dev;
+exports.build = parallel(imagenes, versionWebp, html, javascript, css_to_build);
