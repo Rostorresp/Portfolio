@@ -6,8 +6,9 @@
   "scripts": {
     "sass": "sass src/scss:build/css",
     "deploy": "gh-pages -d build",
+    "build": "npm run build:pre && npm run build:gulp && npm run build:index",
     "build:pre": "rimraf ./build",
-    "build": "npx gulp build",
+    "build:gulp": "npx gulp build",
     "build:index": "node ./generateindex.js",
     "dev": "npx gulp dev"
   },
