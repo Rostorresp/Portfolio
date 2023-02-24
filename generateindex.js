@@ -261,7 +261,7 @@ const html = `<!DOCTYPE html>
             </div>
             <div class="footer-texto">
                 <p class="centrar-texto">Hecho con ❤️ por Rosmery Torres - Código disponible en
-                    <a href="https://github.com" target="_blank">GitHub</a>
+                    <a href="https://github.com/Rostorresp/ghpages-portfolio" target="_blank">GitHub</a>
             </div>
         </div>
     </footer>

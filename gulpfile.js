@@ -64,6 +64,7 @@ function javascript(done) {
     done()
 }
 
+
 function dev(done) {
     watch("src/scss/**/*.scss", css)
     watch("src/js/**/*.js", javascript)
@@ -71,9 +72,16 @@ function dev(done) {
     done()
 }
 
+
+function main(done) {
+    done()
+}
+
+
 exports.html = html;
 exports.css = css;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.js = javascript;
 exports.dev = parallel(imagenes, versionWebp, html, javascript, css, dev);
+exports.main = parallel(main, imagenes, versionWebp, html, javascript, css);
