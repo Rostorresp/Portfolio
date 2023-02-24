@@ -6,8 +6,10 @@
   "scripts": {
     "sass": "sass src/scss:build/css",
     "deploy": "gh-pages -d build",
-    "delete-directory": "rimraf ./build",
-    "create-index": "node ./generateindex.js"
+    "build:pre": "rimraf ./build",
+    "build": "npx gulp build",
+    "build:index": "node ./generateindex.js",
+    "dev": "npx gulp dev"
   },
   "keywords": [
     "GULP",
