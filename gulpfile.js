@@ -79,6 +79,7 @@ function javascript(done) {
 
 
 function dev(done) {
+    css_to_src(done)
     watch("src/scss/**/*.scss", css_to_src)
     done()
 }
