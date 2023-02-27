@@ -3,7 +3,7 @@
 ## Clonar Repositorio
 
 ```bash
-https://github.com/Rostorresp/ghpages-portfolio.git
+https://github.com/Rostorresp/portfolio.git
 ```
 
 

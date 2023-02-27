@@ -20,7 +20,7 @@ const html = `<!DOCTYPE html>
     <script src="https://kit.fontawesome.com/04294075b3.js" crossorigin="anonymous"></script>
     <!-- //fontAwesome -->
 
-    <link rel="stylesheet" href="/ghpages-portfolio/css/app.css">
+    <link rel="stylesheet" href="/portfolio/css/app.css">
 </head>
 
 <body>
@@ -51,8 +51,8 @@ const html = `<!DOCTYPE html>
         <div class="hero-contenido">
             <div class="hero-imagen">
                 <picture>
-                    <source srcset="/ghpages-portfolio/img/coding-amico.webp" type="image/webp">
-                    <img loading="lazy" width="200" height="300" src="/ghpages-portfolio/img/coding-amico.png" alt="imagen-main">
+                    <source srcset="/portfolio/img/coding-amico.webp" type="image/webp">
+                    <img loading="lazy" width="200" height="300" src="/portfolio/img/coding-amico.png" alt="imagen-main">
                 </picture>
             </div>
             <div class="hero-texto">
@@ -192,8 +192,8 @@ const html = `<!DOCTYPE html>
     <!---------------------- Ending experience ---------------------------- -->
 
     <!-- <picture>
-        <source srcset="/ghpages-portfolio/img/coding-amico.webp" type="image/webp">
-        <img loading="lazy" width="200" height="300" src="/ghpages-portfolio/img/coding-amico.png" alt="imagen-main">
+        <source srcset="/portfolio/img/coding-amico.webp" type="image/webp">
+        <img loading="lazy" width="200" height="300" src="/portfolio/img/coding-amico.png" alt="imagen-main">
     </picture> -->
 
     <section id="proyectos" class="proyectos">
@@ -203,8 +203,8 @@ const html = `<!DOCTYPE html>
 
                 <article class="proyectos-articulo">
                     <picture>
-                        <source srcset="/ghpages-portfolio/img/sitelogo.webp" type="image/webp">
-                        <img src="/ghpages-portfolio/img/sitelogo.png" width="500" alt="image-sitelogo">
+                        <source srcset="/portfolio/img/sitelogo.webp" type="image/webp">
+                        <img src="/portfolio/img/sitelogo.png" width="500" alt="image-sitelogo">
                     </picture>
                     <div class="proyectos-detail">
                         <h3>Landing Page</h3>
@@ -215,8 +215,8 @@ const html = `<!DOCTYPE html>
 
                 <article class="proyectos-articulo">
                     <picture>
-                        <source srcset="/ghpages-portfolio/img/landingcoffee.webp" type="image/webp">
-                        <img src="/ghpages-portfolio/img/landingcoffee.png" width="500" alt="image-landingcoffe">
+                        <source srcset="/portfolio/img/landingcoffee.webp" type="image/webp">
+                        <img src="/portfolio/img/landingcoffee.png" width="500" alt="image-landingcoffe">
                     </picture>
                     <div class="proyectos-detail">
                         <h3>Blog de Café</h3>
@@ -226,8 +226,8 @@ const html = `<!DOCTYPE html>
 
                 <article class="proyectos-articulo">
                     <picture>
-                        <source srcset="/ghpages-portfolio/img/tresenuno.webp" type="image/webp">
-                        <img src="/ghpages-portfolio/img/tresenuno.png" width="500" alt="image-tresenuno">
+                        <source srcset="/portfolio/img/tresenuno.webp" type="image/webp">
+                        <img src="/portfolio/img/tresenuno.png" width="500" alt="image-tresenuno">
                     </picture>
                     <div class="proyectos-detail">
                         <h3>Tres en Raya</h3>
@@ -237,8 +237,8 @@ const html = `<!DOCTYPE html>
 
                 <article class="proyectos-articulo">
                     <picture>
-                        <source srcset="/ghpages-portfolio/img/rockfestivale.webp" type="image/webp">
-                        <img src="/ghpages-portfolio/img/rockfestivale.png" width="500" alt="image-sitestorefrontend">
+                        <source srcset="/portfolio/img/rockfestivale.webp" type="image/webp">
+                        <img src="/portfolio/img/rockfestivale.png" width="500" alt="image-sitestorefrontend">
                     </picture>
                     <div class="proyectos-detail">
                         <h3>Rock & EDM</h3>
@@ -261,12 +261,12 @@ const html = `<!DOCTYPE html>
             </div>
             <div class="footer-texto">
                 <p class="centrar-texto">Hecho con ❤️ por Rosmery Torres - Código disponible en
-                    <a href="https://github.com/Rostorresp/ghpages-portfolio" target="_blank">GitHub</a>
+                    <a href="https://github.com/Rostorresp/portfolio" target="_blank">GitHub</a>
             </div>
         </div>
     </footer>
 
-    <script src="/ghpages-portfolio/js/app.js"></script>
+    <script src="/portfolio/js/app.js"></script>
 </body>
 
 </html>`;
